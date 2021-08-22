@@ -1,11 +1,11 @@
-package com.example.motivation
+package com.example.motivation.ui
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.motivation.R
 import com.example.motivation.infra.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_splash.*
 
