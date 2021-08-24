@@ -20,9 +20,9 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
         mSecurityPreferences = SecurityPreferences(this)
 
-        if (supportActionBar != null) {
+        /*if (supportActionBar != null) {
             supportActionBar!!.hide()
-        }
+        }*/
 
         //atribuindo o evento de clique do botão Salvar
         buttonSave.setOnClickListener(this)
