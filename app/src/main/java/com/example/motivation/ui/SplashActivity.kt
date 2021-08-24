@@ -20,15 +20,13 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
         mSecurityPreferences = SecurityPreferences(this)
 
-        /*if (supportActionBar != null) {
-            supportActionBar!!.hide()
-        }*/
-
         //atribuindo o evento de clique do botão Salvar
         buttonSave.setOnClickListener(this)
 
         val securityPreferences = SecurityPreferences(this)
         securityPreferences.storeString("", "")
+
+        verifyName()
     }
 
     // tratando qual o botão que foi clicado
@@ -39,6 +37,13 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun verifyName() {
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        if (name != "") {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
     private fun handleSave() {
         val name = editName.text.toString()
@@ -46,10 +51,10 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         if (name != "") {
             mSecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
             startActivity(Intent(this, MainActivity::class.java))
+            startActivity(intent)
         } else {
             Toast.makeText(this, "Informe seu nome", Toast.LENGTH_SHORT).show()
         }
     }
-
 
 }

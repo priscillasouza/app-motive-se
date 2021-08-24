@@ -31,7 +31,7 @@ class Mock {
 
         val filtered = mListPhrases.filter { (it.category == categoryId || categoryId == ALL) }
 
-        val rand = Random.nextInt(mListPhrases.size)
+        val rand = Random.nextInt(filtered.size)
         return filtered[rand].description
     }
 

@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         mSecurityPreferences = SecurityPreferences(this)
-        textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        textName.text = "Olá, $name!"
 
         //lógica inicial de seleção dos filtros
         imageAll.setColorFilter(resources.getColor(R.color.colorAccent))
