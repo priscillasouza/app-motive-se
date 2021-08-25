@@ -59,7 +59,7 @@
         android:layout_centerVertical="true"
         android:layout_margin="16dp"
         android:layout_marginTop="32dp"
-        android:text="Frase"
+        android:text="@string/frase"
         android:textAlignment="center"
         android:textSize="22sp" />
 
@@ -80,6 +80,6 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/ripple_button"
         android:padding="16dp"
-        android:text="Nova Frase" />
+        android:text="@string/nova_frase" />
 
 </RelativeLayout>
